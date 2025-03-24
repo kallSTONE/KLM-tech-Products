@@ -1,0 +1,412 @@
+*{
+  margin:0px;
+  font-family: inter, 'sans-serif';
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  background-color: #FAFAF8;
+}
+
+.header{
+  background-image: linear-gradient(rgb(90, 76, 50), rgba(62, 58, 57, 0.448));
+  position: fixed;
+  width: 100%;
+  height: 70px;
+  top: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 1px 1px 7px black;
+  z-index: 2;
+}
+
+.chef-logo{
+  width:50px;
+  margin: 0 11px;
+}
+
+.logoPart{
+  align-items: center;
+  display: flex;
+}
+
+.logoPart p{
+  font-size: 1.6rem;
+  font-family: Inter;
+  font-weight: 600;
+}
+
+
+main{
+  padding-top: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 1000px;
+  background-image: linear-gradient(rgb(90, 76, 50), rgba(62, 58, 57, 0.448));
+}
+
+.background-blur{
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  /* opacity: 0.9; */
+}
+
+.addIngredientForm{
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  height: 38px;
+  margin-bottom: 10px;
+  margin-top: 6px;
+}
+
+.addIngredientForm input{
+  border: 1px solid rgb(206, 74, 17);
+}
+
+.addIngriedientForm input{
+  align-items: center;
+  display: flex;
+  border-radius: 6px;
+  border:1px solid grey;
+  padding: 10px 13px;
+  flex-grow: 1;
+  min-width: 100px;
+  max-width: 500px;
+  width: auto;
+  min-height: 35px;
+  box-shadow:0px 1px 2px 0px rgbs(0, 0, 0, 0.05);
+}
+
+label{
+  font-weight: bold;
+}
+img{
+  width: auto;
+  height :auto;
+}
+
+form .btn1{  
+  background-color: rgb(205, 88, 38);
+  color: white;
+  width: auto;
+  min-height: 37px;
+  padding: 6px 16px;
+  min-width: 100px;
+  align-self: center;
+  border-radius: 4px;
+  border: none;
+  align-items: center;  
+  box-shadow:rgba(220, 94, 41, 0.348) 0px 1px 2px 1px;
+}
+
+form .btn1::before{
+  content:"+";
+  margin-right: 4px;
+}
+
+
+form .btn2{
+  box-shadow: inset 1px 1px 4px white;
+  border: none;
+  background-color:rgb(190, 25, 0) ;
+  color:white;
+  border-radius: 5px;
+  font-weight: 900;
+}
+
+
+button:hover{
+  cursor: pointer;
+  scale: 1.034;
+
+}
+
+.ingreList{
+  z-index: 1;
+  background-color: rgba(255, 255, 255, 0.487);
+  padding:10px
+}
+
+
+
+.ctaBox{
+  z-index: 1;
+  align-items: center;
+  justify-content: space-between;
+  display: flex;
+  margin-top: 2rem;
+  background-color: rgba(235, 231, 231, 0.901);
+  padding: 10px;
+  min-width: 400px;
+  min-height: 100px;
+  box-shadow: 1px 2px 6px rgb(205, 88, 38);
+  border-radius: 5px;
+}
+
+@media only screen and (min-width: 768px) {
+  .ctaBox {
+      min-width: 600px;
+  }
+}
+
+
+section{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.describe-action {
+  min-height: 90px;
+  text-align: left;
+}
+
+.describe-action > p{
+  font-size: 0.8rem;
+  margin-top: 30px;
+}
+
+.generateRecipe{
+  background-color: rgb(205, 88, 38);
+  color: white;
+  height: 30px;
+  width: auto;
+  min-width: 100px;
+  align-self: center;
+  border-radius: 4px;
+  border: none;
+}
+
+.generateRecipe:hover{
+  scale: 1.09;
+}
+
+.generateRecipe:focus{
+  box-shadow: 2px 2px 5px rgb(101, 101, 211);
+  scale: 1.09;
+}
+
+
+.flipping-loader {
+  height: 22.4px;
+  display: grid;
+  grid-template-columns: repeat(5, 22.4px);
+  grid-gap: 5.6px;
+}
+.flipping-loader div {
+  animation: flipping-owie1ymd 1.25s calc(var(--delay) * 1s) infinite ease;
+  background-color: rgba(255, 255, 255, 0.487);
+  margin-top:100px;
+  width: 22.4px;
+  height: 22.4px;
+}
+.flipping-loader div:nth-of-type(1) { --delay: 0.15; }
+.flipping-loader div:nth-of-type(2) { --delay: 0.25; }
+.flipping-loader div:nth-of-type(3) { --delay: 0.35; }
+.flipping-loader div:nth-of-type(4) { --delay: 0.51; }
+.flipping-loader div:nth-of-type(5) { --delay: 0.75; }
+
+@keyframes flipping-owie1ymd {
+  0% { transform: perspective(44.8px) rotateY(-180deg); }
+  50% { transform: perspective(44.8px) rotateY(0deg); }
+}
+
+
+
+.gotrecipe{
+  background-color: rgba(218, 208, 208, 0.591);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 25px;
+  padding-bottom: 20px;
+  color: black;
+  font-weight: 500  ;
+  margin: 60px;
+  max-width: 70%;
+  border-radius: 10px;
+}
+.suggested-recipe-container{
+  margin-top: 10px;
+  max-width: 55%;
+  row-gap: 16px;
+  padding: 10px;
+  overflow-wrap: break-word;
+}
+
+.gotrecipe h2{
+  color:rgb(206, 74, 17);
+  text-decoration-color: white;
+  text-decoration-line:underline;
+}
+.gotrecipe strong{
+  color:rgb(206, 74, 17);
+}
+
+
+.contactSection{
+  position:fixed;
+  display: flex;
+  background-color: rgb(90, 76, 50);
+  color: orange;
+  z-index: 2;
+  width: 100%;
+  height: 400px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 
+.signUp{
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  height: 40vh;
+}
+
+.signUp button{
+  justify-content: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: rgb(47, 47, 134);
+  color: white;
+  border: none;
+  border-radius: 15px;
+  margin-top: 30px;
+  box-shadow: 1px 1px 5px grey;
+}
+.signUp h3{
+  align-self: center;
+  border: 0.51px solid black;
+  padding: 5px 100px;
+}
+
+.description{
+  background-color: rgba(255, 255, 255, 0.863);
+  box-shadow: 1px 1px 5px grey;
+  min-height: 20vh;
+  margin:  20px 1px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* FOR THE FORM PRACTICE */
+ /* body {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  background-color: #42b346;
+  padding-bottom: 100px;
+}
+
+form{
+  border: 1px solid red;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 100px;
+  text-align: left;
+}
+fieldset{
+  margin: 10px 1px;
+  display: flex;
+  flex-direction: column;
+  padding : 10px;
+}
+
+
+select{
+  display: flex;
+  flex-direction: column;
+  min-width: 30%;
+}
+button{
+  margin: 50px 10px;
+}
+
+textarea{
+  display: flex;
+  flex-direction: column;
+  min-width: 30%;
+  min-height: 80px;
+} */ 
+
+
+
+
+
+
+
+
+/* MUSIC PADS */
+
+/* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #1C1917;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pad-container {
+  display: grid;
+  grid-template-columns: repeat(4, 100px);
+  grid-template-rows: repeat(2, 100px);
+  gap: 10px;
+}
+
+button {
+  height: 100px;
+  width: 100px;
+  border: 2px solid white;
+  border-radius: 5px;
+  cursor: pointer;
+  opacity: 0.142;
+}
+
+.on{
+  opacity:1;
+}*/
